@@ -1,0 +1,21 @@
+#include <unistd.h>
+#include "main.h"
+/**
+* Main -Entry point
+*Return: Always 0 (Success)
+*/
+int print_alphabet(int alpha);
+
+int main (void)
+{
+int print_alphabet(int alpha)
+{
+for (alpha = 48; alpha < 75; alpha++)
+{
+_putchar(alpha);
+}
+_putchar('\n');
+}
+print_alphabet();
+return(0);
+}
