@@ -1,6 +1,8 @@
 #include "main.h"
 /**
 * _isalpha description
+* @c : character to check
+* Return:0 or 1
 */
 int _isalpha(int c)
 {
