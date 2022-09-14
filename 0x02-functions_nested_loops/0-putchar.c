@@ -3,11 +3,6 @@
 /**
 * main - Entry point
 *
-* main.h is defined in file main.h
-*
-* _putchar - writes the character c to stdout
-* @c: The character to print
-*
 * Return: Always 0 (success)
 */
 int main(void)
