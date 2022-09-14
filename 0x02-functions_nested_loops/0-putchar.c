@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
 * _putchar - writes the character c to stdout
 * @c: The character to print
@@ -15,8 +16,8 @@ size = sizeof(str) / sizeof(int);
 
 for (counter = 0; counter < size; counter++){
 
-putchar(str[counter]);
+_putchar(str[counter]);
 }
-putchar('\n');
+_putchar('\n');
 return (0);
 }
