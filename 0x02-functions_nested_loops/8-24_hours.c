@@ -26,7 +26,7 @@ minuteSecondDigit = 0;
 minuteFirstDigit++;
 }
 if (minuteFirstDigit > 5)
-{	  
+{
 minuteFirstDigit = 0;
 hourSecondDigit++;
 }
