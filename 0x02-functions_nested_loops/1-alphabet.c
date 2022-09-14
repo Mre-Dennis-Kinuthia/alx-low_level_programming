@@ -1,8 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
-* Main -Entry point
-*Return: Always 0 (Success)
+* Return: Always 0 (Success)
 * print_alphabet - prints alphabet
 */
 
