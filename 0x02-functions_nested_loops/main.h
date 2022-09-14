@@ -1,4 +1,1 @@
-/**
- *main header
- **/
-int _putchar(char);
+int _putchar(char c);
