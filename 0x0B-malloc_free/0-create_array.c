@@ -24,7 +24,7 @@ return (NULL);
 else
 {
 for (i = 0; i < size; i++)
-{	  
+{
 str[i] = c;
 }
 }
