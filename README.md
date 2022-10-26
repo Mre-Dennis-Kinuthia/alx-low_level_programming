@@ -1,1 +1,1 @@
-poor example read me
+read me
