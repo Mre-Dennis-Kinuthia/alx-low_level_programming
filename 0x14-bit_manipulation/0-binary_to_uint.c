@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
+unsigned int binary_to_uint(const char *b)
+{
+	int counter = 0;
+	int power = 0;
+	int output = 0;
+	if (b == NULL)
+		return (0);
+
+	for(; *(b + counter) != '\0'; counter++)
+	{
+		if(b[counter] != '0' && b[counter] != '1')
+			return (0);
+	}
+	--counter;
+	for(; counter >= 0; counter--)
+	{
+		if (b[counter] == '1')
+			{
+				output += _pow(2 , power);
+			}
+		power++;
+	}
+	return (output);
+}
+unsigned int _pow (const int base, int index)
+{
+	int product = 1;
+	for(; index > 0; index--)
+	{
+		product = product * base;
+	}
+	return (product);
+}
