@@ -14,13 +14,13 @@ unsigned int binary_to_uint(const char *b)
 	if (b == NULL)
 		return (0);
 
-	for(; *(b + counter) != '\0'; counter++)
+	for (; *(b + counter) != '\0'; counter++)
 	{
-		if(b[counter] != '0' && b[counter] != '1')
+		if (b[counter] != '0' && b[counter] != '1')
 			return (0);
 	}
 	--counter;
-	for(; counter >= 0; counter--)
+	for (; counter >= 0; counter--)
 	{
 		if (b[counter] == '1')
 			{
@@ -33,7 +33,7 @@ unsigned int binary_to_uint(const char *b)
 unsigned int _pow (const int base, int index)
 {
 	int product = 1;
-	for(; index > 0; index--)
+	for (; index > 0; index--)
 	{
 		product = product * base;
 	}
