@@ -7,13 +7,13 @@ int linear_search(int *array, size_t size, int value)
 		return (-1);
 
 	/**
- * linear_search - Searches for a value in an array of integers using linear search
+ * linear_search - Searches for a value in an array of integers using ls
  *
  * @array: Pointer to the first element of the array to search
  * @size: Number of elements in the array
  * @value: Value to search for
  *
- * Return: Index of the first occurrence of value in the array, or -1 if not found
+ * Return: Index of the first occurrence of value in array, or -1 if not found
  */
 	for (size_t i = 0; i < size; i++)
 	{
