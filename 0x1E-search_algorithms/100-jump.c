@@ -1,36 +1,44 @@
-#include <stddef.h>
 #include <stdio.h>
 #include <math.h>
 
 /**
- * jump_search - searches for a value in a sorted array of integers
+ * jump_search - Searches for a value in a sorted array of integers
  *               using the Jump search algorithm
- * @array: pointer to the first element of the array to search
- * @size: number of elements in the array
- * @value: value to search for
+ * @array: Pointer to the first element of the array to search in
+ * @size: Number of elements in the array
+ * @value: Value to search for
  *
- * Return: index where value is located, or -1 on failure
+ * Return: Index where value is located or -1 if value is not present or
+ *         if array is NULL
  */
 int jump_search(int *array, size_t size, int value)
 {
-    int jump, left, right, i;
+    size_t jump, left, right, i;
 
     if (array == NULL || size == 0)
         return (-1);
 
-    jump = (int)sqrt(size);
-    for (left = 0, right = jump; right < (int)size && array[right] < value;
-         left = right, right += jump)
+    jump = sqrt(size);
+    left = 0;
+    right = 0;
+
+    while (right < size && array[right] < value)
     {
-        printf("Value checked array[%d] = [%d]; ", left, array[left]);
+        printf("Value checked array[%lu] = [%d]\n", right, array[right]);
+        left = right;
+        right += jump;
     }
-    printf("Value found between indexes [%d] and [%d]\n", left, right);
-    for (i = left; i < (int)size && i <= right; i++)
+
+    printf("Value found between indexes [%lu] and [%lu]\n", left, right);
+
+    right = right < size ? right : size - 1;
+
+    for (i = left; i <= right && array[i] <= value; i++)
     {
-        printf("Value checked array[%d] = [%d]%s", i, array[i],
-               i == right ? "\n" : "; ");
+        printf("Value checked array[%lu] = [%d]\n", i, array[i]);
         if (array[i] == value)
             return (i);
     }
+
     return (-1);
 }
