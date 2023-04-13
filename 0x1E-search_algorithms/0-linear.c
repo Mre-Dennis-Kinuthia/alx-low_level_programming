@@ -6,7 +6,15 @@ int linear_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	/* Iterate over the array using a for loop */
+	/**
+ * linear_search - Searches for a value in an array of integers using linear search
+ *
+ * @array: Pointer to the first element of the array to search
+ * @size: Number of elements in the array
+ * @value: Value to search for
+ *
+ * Return: Index of the first occurrence of value in the array, or -1 if not found
+ */
 	for (size_t i = 0; i < size; i++)
 	{
 		/* Print the value of the current element being checked */
