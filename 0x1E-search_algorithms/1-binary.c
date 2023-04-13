@@ -32,7 +32,7 @@ i = (left + right) / 2;
 if (array[i] < value)
 left = i + 1;
 else if (array[i] > value)
-       
+
 right = i - 1;
 else
 return (i);
