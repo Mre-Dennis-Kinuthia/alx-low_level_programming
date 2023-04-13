@@ -1,4 +1,6 @@
 #include <math.h>
+#include <stddef.h>
+
 
 int jump_search(int *array, size_t size, int value)
 {
@@ -16,8 +18,9 @@ int jump_search(int *array, size_t size, int value)
 
     right = (right > (int)size - 1) ? (int)size - 1 : right;
     printf("Value found between indexes [%d] and [%d]\n", left, right);
+    int i;
 
-    for (int i = left; i <= right; i++) {
+    for (i = left; i <= right; i++) {
         printf("Value checked array[%d] = [%d]\n", i, array[i]);
         if (array[i] == value)
             return i;
